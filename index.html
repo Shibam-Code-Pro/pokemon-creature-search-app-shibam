@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0">
+    <title>Pokémon Creature Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>
+            <img src="pokeball.png" alt="Pokéball" class="pokeball-logo">
+            <span class="title-text">Pokémon Creature Search</span>
+        </h1>
+        
+        <div class="search-section">
+            <input type="text" id="search-input" placeholder="Enter Pokémon name or ID..." required>
+            <button id="search-button">Search</button>
+        </div>
+
+        <div class="creature-info" id="creature-info">
+            <div class="close-button" id="close-button" title="Close Pokémon details">
+                <span class="close-icon">✕</span>
+            </div>
+            <div class="creature-header">
+                <div class="creature-image-container">
+                    <img id="creature-image" alt="Pokémon Image" style="display: none;">
+                </div>
+                <div id="creature-name"></div>
+                <div id="creature-id"></div>
+            </div>
+
+            <div class="creature-details">
+                <div class="detail-card">
+                    <div class="detail-label">Weight</div>
+                    <div class="detail-value" id="weight"></div>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-label">Height</div>
+                    <div class="detail-value" id="height"></div>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-label">Base Experience</div>
+                    <div class="detail-value" id="base-experience"></div>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-label">Order</div>
+                    <div class="detail-value" id="order"></div>
+                </div>
+            </div>
+
+            <div class="abilities-section">
+                <div class="abilities-title">🎯 Abilities</div>
+                <div id="abilities" class="abilities-container"></div>
+            </div>
+
+            <div class="stats-section">
+                <div class="stats-title">⚔️ Battle Stats</div>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-label">HP</div>
+                        <div class="stat-value" id="hp"></div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Attack</div>
+                        <div class="stat-value" id="attack"></div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Defense</div>
+                        <div class="stat-value" id="defense"></div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Sp. Attack</div>
+                        <div class="stat-value" id="special-attack"></div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Sp. Defense</div>
+                        <div class="stat-value" id="special-defense"></div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Speed</div>
+                        <div class="stat-value" id="speed"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="types-section">
+                <div class="types-title">🔥 Types</div>
+                <div id="types"></div>
+            </div>
+        </div>
+
+        <div class="available-creatures" id="available-creatures">
+            <div class="accordion-header" id="accordion-header">
+                <h2>📋 Available Pokémon (1,302 total)</h2>
+                <span class="accordion-toggle">▼</span>
+            </div>
+            <div class="accordion-content" id="accordion-content">
+                <p>Click on any name to search instantly!</p>
+                <div class="creatures-grid" id="creatures-grid">
+                    <div class="loading">Loading creature list...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
